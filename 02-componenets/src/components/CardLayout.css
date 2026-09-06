@@ -1,0 +1,94 @@
+/* Container Grid Setup */
+.card-grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+  padding: 24px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Individual Card Styling */
+.custom-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.custom-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Image Utilities */
+.card-image-wrapper {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* Fixed 16:9 Aspect Ratio */
+}
+
+.card-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  background-color: #3b82f6;
+  color: white;
+  padding: 4px 8px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+/* Text Content & Flex-grow alignment */
+.card-content {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Pushes the button to the bottom even if descriptions vary in length */
+}
+
+.card-title {
+  margin: 0 0 8px 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.card-description {
+  margin: 0 0 16px 0;
+  font-size: 0.95rem;
+  color: #4b5563;
+  line-height: 1.5;
+  flex-grow: 1; /* Ensures text area expands evenly */
+}
+
+/* Interactive Element */
+.card-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #1f2937;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.card-button:hover {
+  background-color: #374151;
+}
